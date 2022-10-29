@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="layout" style="-fx-background-color: #1B2A49;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 30px;">
+         <children>
+            <Label fx:id="Librarylbl" style="-fx-font-size: 30; -fx-text-fill: White;" text="Library">
+               <font>
+                  <Font name="Goudy Old Style Bold" size="12.0" />
+               </font></Label>
+            <Button fx:id="lendReceivebtn" mnemonicParsing="false" onAction="#onLendReceiveBtnClick" style="-fx-padding: 10px; -fx-background-color: #465881; -fx-text-fill: white;" text="Lend/Receive" />
+            <Button fx:id="collectionbtn" mnemonicParsing="false" onAction="#onCollectionBtnClick" style="-fx-padding: 10px; -fx-background-color: #465881; -fx-text-fill: white;" text="Collection" />
+            <Button fx:id="membersbtn" mnemonicParsing="false" onAction="#onMembersBtnClick" style="-fx-padding: 10px; -fx-background-color: #465881; -fx-text-fill: White;" text="Members" />
+            <Label fx:id="nameLabel" contentDisplay="TOP" style="-fx-font-size: 14px; -fx-text-fill: white;" text="Welcome" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

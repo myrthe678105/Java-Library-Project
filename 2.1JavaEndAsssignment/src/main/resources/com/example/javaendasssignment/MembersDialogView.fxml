@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="250.0" style="-fx-padding: 40px; -fx-spacing: 25px;">
+         <children>
+            <Label text="First Name:" />
+            <TextField fx:id="firstNametxt" promptText="First Name" />
+            <Label text="Last Name:" />
+            <TextField fx:id="lastNametxt" promptText="Last Name" />
+            <Label text="Date Of Birth:" />
+            <DatePicker fx:id="dateOfBirthtxt" promptText="dd/mm/yyyy" />
+            <Label fx:id="MemberDialogErrorLbl" />
+            <Label fx:id="dialogErrorlbl" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="250.0" style="-fx-padding: 40px; -fx-spacing: 25px;">
+         <children>
+            <Label text="Username:" />
+            <TextField fx:id="usernametxt" promptText="Username" />
+            <Label text="Password:" />
+            <PasswordField fx:id="passwordtxt" promptText="Password" />
+            <Label text="Confirm Password:" />
+            <PasswordField fx:id="passwordConfirmationtxt" promptText="Confirm Password" />
+            <HBox alignment="BOTTOM_CENTER" prefHeight="143.0" prefWidth="167.0" style="-fx-spacing: 40px;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onCancelbtnClick" text="Cancel" />
+                  <Button fx:id="addMemberbtn" mnemonicParsing="false" onAction="#onAddMembersbtnClick" style="-fx-background-color: lightblue;" text="Add" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

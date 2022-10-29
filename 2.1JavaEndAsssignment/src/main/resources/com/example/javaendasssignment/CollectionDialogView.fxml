@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="275.0" style="-fx-padding: 40px; -fx-spacing: 20px;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Title:" />
+      <TextField fx:id="bookTitletxt" promptText="Book Title" />
+      <Label text="Author:" />
+      <TextField fx:id="bookAuthortxt" promptText="Book Author" />
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 70px;">
+         <children>
+            <Button fx:id="cancelBookbtn" mnemonicParsing="false" onAction="#onCancelbtnClick" text="Cancel" />
+            <Button fx:id="addBookbtn" mnemonicParsing="false" onAction="#onAddbtnClick" style="-fx-background-color: Lightblue;" text="Add" />
+         </children>
+      </HBox>
+      <Label fx:id="dialogErrorLbl" textAlignment="CENTER" />
+   </children>
+</VBox>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox style="-fx-background-color: #C9D1D3;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="371.0" prefWidth="600.0" style="-fx-padding: 20px; -fx-spacing: 30px;">
+         <children>
+            <Pane prefHeight="265.0" prefWidth="260.0">
+               <children>
+                  <VBox alignment="CENTER" layoutY="45.0" prefHeight="265.0" prefWidth="260.0" style="-fx-background-color: white; -fx-spacing: 30px; -fx-padding: 30px;">
+                     <children>
+                        <Label fx:id="lendErrortxt" />
+                        <TextField fx:id="lendItemCodetxt" promptText="Item Code" />
+                        <TextField fx:id="memIDtxt" promptText="Member Identifier" />
+                        <Button mnemonicParsing="false" onAction="#onLendItemClick" style="-fx-background-color: #75afd2; -fx-padding: 10px; -fx-text-fill: white;" text="Lend Item" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <Label layoutX="8.0" layoutY="3.0" style="-fx-font-size: 20px;" text="Lend/Receive Items" />
+               </children>
+            </Pane>
+            <Pane prefHeight="265.0" prefWidth="260.0">
+               <children>
+                  <VBox alignment="CENTER" layoutY="45.0" prefHeight="265.0" prefWidth="260.0" style="-fx-spacing: 55px; -fx-padding: 30px; -fx-background-color: white;">
+                     <children>
+                        <Label fx:id="receiveErrortxt" />
+                        <TextField fx:id="receiveItemCodetxt" promptText="Item Code" />
+                        <Button mnemonicParsing="false" onAction="#onReceiveItemClick" style="-fx-background-color: #75afd2; -fx-text-fill: white; -fx-padding: 10px;" text="Receive Item" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

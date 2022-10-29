@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="371.2" minHeight="371.2" prefHeight="371.2" style="-fx-background-color: #C9D1D3; -fx-spacing: 10px; -fx-padding: 20px;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label style="-fx-font-size: 20;" text="Members" />
+      <TextField fx:id="searchMembertxt" promptText="Search Member" />
+      <TableView fx:id="membersTableView" prefHeight="350.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="IdentifierCol" minWidth="50.0" prefWidth="75.0" text="Identifier">
+            <cellValueFactory>
+                <PropertyValueFactory property="identifier" />
+            </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="FirstNameCol" minWidth="100.0" prefWidth="75.0" text="First name">
+            <cellValueFactory>
+                <PropertyValueFactory property="firstname" />
+            </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="LastNameCol" minWidth="100.0" prefWidth="75.0" text="Last name">
+            <cellValueFactory>
+                <PropertyValueFactory property="lastname" />
+            </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="BirthDateCol" minWidth="100.0" prefWidth="75.0" text="Birth Date">
+            <cellValueFactory>
+                <PropertyValueFactory property="dateOfBirth" />
+            </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 50px;">
+         <children>
+            <Label fx:id="membersErrorLbl" />
+            <Button mnemonicParsing="false" onAction="#onDeleteMemberBtn" style="-fx-background-color: #cc3333; -fx-text-fill: white;" text="Delete member" />
+            <Button mnemonicParsing="false" onAction="#onEditMemberBtn" style="-fx-background-color: grey;" text="Edit member" />
+            <Button mnemonicParsing="false" onAction="#onAddMemberBtn" style="-fx-background-color: #75afd2; -fx-text-fill: white;" text="Add member" />
+         </children></HBox>
+   </children>
+</VBox>
