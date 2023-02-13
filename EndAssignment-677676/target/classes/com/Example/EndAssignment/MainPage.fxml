@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="72.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="31.0" layoutY="14.0" prefHeight="17.0" prefWidth="537.0" text="Libray System" textOverrun="CLIP">
+               <font>
+                  <Font name="Consolas Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <TabPane prefHeight="332.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Lending/Receiving">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lblWelcome" layoutX="28.0" layoutY="32.0" prefHeight="23.0" prefWidth="238.0" text="Welcome">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtItemCodeLending" layoutX="28.0" layoutY="89.0" promptText="Item Code" />
+                        <TextField fx:id="txtMemberIdLending" layoutX="28.0" layoutY="149.0" promptText="Member ID" />
+                        <TextField fx:id="txtItemCodeReceiving" layoutX="350.0" layoutY="89.0" promptText="Item Code" />
+                        <Line endY="4.450479991646716E-6" layoutX="300.0" startY="298.6666564941406" />
+                        <Button fx:id="btnLendItem" layoutX="28.0" layoutY="225.0" mnemonicParsing="false" onAction="#onLendItemClick" style="-fx-background-color: #3d9bf8;" text="Lend Item" textFill="#e9ebed" />
+                        <Button fx:id="btnReceiveItem" layoutX="350.0" layoutY="136.0" mnemonicParsing="false" onAction="#onReceiveItemClick" style="-fx-background-color: #3d9bf8;" text="Receive Item" textFill="#f6eeee" />
+                        <Label fx:id="lblInformation" layoutX="26.0" layoutY="188.0" prefHeight="27.0" prefWidth="254.0" />
+                        <Label fx:id="lblInfoReceivingItem" layoutX="350.0" layoutY="176.0" prefHeight="23.0" prefWidth="207.0" />
+                        <Label fx:id="lblLateFine" layoutX="350.0" layoutY="216.0" />
+                        <Button fx:id="btnPayFine" layoutX="454.0" layoutY="221.0" mnemonicParsing="false" onAction="#onPayFineClick" style="-fx-background-color: #3d9bf8;" text="Pay Fine" textFill="#e9dfdf" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Collection">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: dcdcdc;">
+                     <children>
+                        <Label layoutX="38.0" layoutY="14.0" text="Items">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAddItem" layoutX="38.0" layoutY="241.0" mnemonicParsing="false" onAction="#onClickAddItem" style="-fx-background-color: green;" text="Add Item" textFill="#efecf2" />
+                        <Button fx:id="btnEditItem" layoutX="151.0" layoutY="241.0" mnemonicParsing="false" onAction="#onClickEditItem" style="-fx-background-color: #3d9bf8;" text="Edit Item" textFill="#edece9" />
+                        <Button fx:id="btnDeleteItem" layoutX="261.0" layoutY="241.0" mnemonicParsing="false" onAction="#onClickDeleteItem" style="-fx-background-color: #980b0b;" text="Delete Item" textFill="#f6f5f5" />
+                         <TableView fx:id="itemTableView" layoutX="34.0" layoutY="41.0" prefHeight="188.0" prefWidth="515.0">
+                         <columns>
+                             <TableColumn prefWidth="50.0" text="ID">
+                                 <cellValueFactory>
+                                     <PropertyValueFactory property="itemCode" />
+                                 </cellValueFactory>
+                             </TableColumn>
+                             <TableColumn prefWidth="60" text="Availability">
+                             <cellValueFactory>
+                                 <PropertyValueFactory property="availability" />
+                             </cellValueFactory>
+                             </TableColumn>
+                             <TableColumn minWidth="100" prefWidth="230" text="Title">
+                                 <cellValueFactory>
+                                     <PropertyValueFactory property="title" />
+                                 </cellValueFactory>
+                             </TableColumn>
+                             <TableColumn prefWidth="100" text="Author">
+                                 <cellValueFactory>
+                                     <PropertyValueFactory property="author" />
+                                 </cellValueFactory>
+                             </TableColumn>
+                             <TableColumn prefWidth="120" text="Expected Return Date">
+                                 <cellValueFactory>
+                                     <PropertyValueFactory property="expectedReturnDate" />
+                                 </cellValueFactory>
+                             </TableColumn>
+                         </columns>
+                         </TableView>
+                        <Button fx:id="btnImportItems" layoutX="464.0" layoutY="241.0" mnemonicParsing="false" onAction="#onClickImportItems" style="-fx-background-color: #e4a425;" text="Import Items" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Members">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: dcdcdc;">
+                       <Label layoutX="34.0" layoutY="14.0" text="Members">
+                                <font>
+                                    <Font size="18.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="btnAddMember" layoutX="34.0" layoutY="241.0" mnemonicParsing="false" onAction="#onClickAddMember" style="-fx-background-color: green;" text="Add Member" textFill="#f3f1f6" />
+                            <Button fx:id="btnEditMember" layoutX="151.0" layoutY="241.0" mnemonicParsing="false" onAction="#onClickEditMember" style="-fx-background-color: #3d9bf8;" text="Edit Member" textFill="#f2f5f8" />
+                            <Button fx:id="btnDeleteMember" layoutX="265.0" layoutY="241.0" mnemonicParsing="false" onAction="#onClickDeleteMember" style="-fx-background-color: #980b0b;" text="Delete Member" textFill="#ede6e6" />
+                     <TableView fx:id="memberTableView" layoutX="34.0" layoutY="41.0" prefHeight="189.0" prefWidth="515.0">
+                       <columns>
+                         <TableColumn prefWidth="70" text="ID">
+                             <cellValueFactory>
+                                 <PropertyValueFactory property="id" />
+                             </cellValueFactory>
+                         </TableColumn>
+                         <TableColumn prefWidth="135" text="First name">
+                             <cellValueFactory>
+                                 <PropertyValueFactory property="firstName" />
+                             </cellValueFactory>
+                         </TableColumn>
+                           <TableColumn prefWidth="145" text="Last name">
+                               <cellValueFactory>
+                                   <PropertyValueFactory property="lastName" />
+                               </cellValueFactory>
+                           </TableColumn>
+                           <TableColumn prefWidth="160" text="Birth date">
+                               <cellValueFactory>
+                                   <PropertyValueFactory property="birthday" />
+                               </cellValueFactory>
+                           </TableColumn>
+                       </columns>
+                     </TableView>
+                        </AnchorPane></content>
+                </Tab>
+        </tabs>
+      </TabPane>
+   </bottom>
+</BorderPane>

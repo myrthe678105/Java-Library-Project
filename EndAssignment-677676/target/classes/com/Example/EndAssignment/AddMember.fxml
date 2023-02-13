@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="217.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnAddMemberConfirmation" layoutX="74.0" layoutY="169.0" mnemonicParsing="false" onAction="#onClickCreateNewMember" prefHeight="25.0" prefWidth="95.0" text="Add Member" />
+      <Button fx:id="btnAddMemberCancel" layoutX="293.0" layoutY="169.0" mnemonicParsing="false" onAction="#onClickCancel" prefHeight="15.0" prefWidth="60.0" text="Cancel" />
+      <TextField fx:id="txtAddMemberFirstName" layoutX="41.0" layoutY="52.0" prefHeight="25.0" prefWidth="161.0" promptText="First Name" />
+      <TextField fx:id="txtAddMemberLastName" layoutX="39.0" layoutY="103.0" prefHeight="25.0" prefWidth="161.0" promptText="Last Name" />
+      <Label fx:id="lblErrorMessage" layoutX="39.0" layoutY="141.0" prefHeight="17.0" prefWidth="374.0" />
+      <DatePicker fx:id="dateTimePickerMemberDOB" layoutX="236.0" layoutY="52.0" promptText="Select Date Of Birth" />
+      <Label layoutX="236.0" layoutY="86.0" text="Date format is days, months and years" />
+   </children>
+</AnchorPane>

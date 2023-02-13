@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="217.0" prefWidth="248.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnAddItemConfirmation" layoutX="39.0" layoutY="169.0" mnemonicParsing="false" onAction="#onClickCreateNewItem" prefHeight="25.0" prefWidth="79.0" text="Add Item" />
+      <Button fx:id="btnAddItemCancel" layoutX="140.0" layoutY="169.0" mnemonicParsing="false" onAction="#onClickCancel" prefHeight="15.0" prefWidth="60.0" text="Cancel" />
+      <TextField fx:id="txtAddItemTitle" layoutX="41.0" layoutY="52.0" prefHeight="25.0" prefWidth="161.0" promptText="Title" />
+      <TextField fx:id="txtAddItemAuthor" layoutX="39.0" layoutY="103.0" prefHeight="25.0" prefWidth="161.0" promptText="Author" />
+      <Label fx:id="lblErrorMessage" layoutX="39.0" layoutY="141.0" />
+   </children>
+</AnchorPane>
